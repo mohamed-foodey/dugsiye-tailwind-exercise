@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        html { scroll-behavior: smooth; }
+        
+        #mobile-menu {
+            transition: all 0.3s ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+        #mobile-menu.open {
+            max-height: 500px;
+            padding-bottom: 2rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <span class="text-xl font-bold text-violet-600 tracking-tight cursor-pointer">
+                     CompanyLogo
+                    </span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-sm text-gray-600 hover:text-violet-600 font-medium transition">Features</a>
+                    <a href="#testimonials" class="text-sm text-gray-600 hover:text-violet-600 font-medium transition">Clients</a>
+                    <a href="#pricing" class="text-sm text-gray-600 hover:text-violet-600 font-medium transition">Pricing</a>
+                    <a href="#contact" class="text-sm text-gray-600 hover:text-violet-600 font-medium transition">Contact</a>
+                    <button class="bg-violet-600 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:bg-violet-700 transition transform active:scale-95">
+                        Get Started
+                    </button>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-600 p-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Dropdown Menu -->
+            <div id="mobile-menu" class="md:hidden">
+                <nav class="flex flex-col space-y-3 pt-2">
+                    <a href="#features" class="mobile-link text-gray-600 font-medium text-base px-2">Features</a>
+                    <a href="#testimonials" class="mobile-link text-gray-600 font-medium text-base px-2">Clients</a>
+                    <a href="#pricing" class="mobile-link text-gray-600 font-medium text-base px-2">Pricing</a>
+                    <a href="#contact" class="mobile-link text-gray-600 font-medium text-base px-2">Contact</a>
+                    <button class="bg-violet-600 text-white w-full py-3 rounded-lg font-bold">
+                        Get Started
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-violet-600 py-16 md:py-24 px-4 text-center text-white">
+            <div class="max-w-3xl mx-auto">
+                <h1 class="text-2xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">Transform Your Business </h1>
+                <p class="text-sm sm:text-base md:text-lg text-violet-100 mb-8 max-w-xl mx-auto leading-relaxed">
+                    Evalate your online presence with our cutting-edge solutions. 
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button class="bg-white text-violet-600 px-7 py-3 rounded-lg font-bold text-sm shadow-md hover:bg-gray-100 transition">
+                        Get Started Now
+                    </button>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE US:  -->
+        <section id="features" class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Why Choose Us</h2>
+                   
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                    <!-- Feature 1 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition">
+                        <div class="mb-4 text-violet-600 bg-violet-50 p-3 rounded-xl">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Lightning Fast</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">Experience blazing fast perfermance with our optimized solutions.</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition">
+                        <div class="mb-4 text-violet-600 bg-violet-50 p-3 rounded-xl">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Highly Secure</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">Your data is protected with enterprise-grade security.</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition">
+                        <div class="mb-4 text-violet-600 bg-violet-50 p-3 rounded-xl">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Expert Support</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">Unmatched quality that sets us apart from the competition.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS: -->
+        <section id="testimonials" class="py-20 bg-gray-50">
+            <div class="max-w-5xl mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-2">Testimonials</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-xl border border-gray-100 flex flex-col items-center text-center">
+                        <p class="text-gray-600 text-sm italic mb-4">"The best decision we ,ade for our business. the results have been incredible"</p>
+                        <img src="https://i.pravatar.cc/150?u=ahmed" class="w-14 h-14 rounded-full mb-4 shadow-sm" alt="Ahmed">
+                        <h4 class="font-bold text-gray-900 text-base">Sarah Jones</h4>
+                        <p class="text-xs text-violet-600 font-medium">CEO, Creative Lab</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-gray-100 flex flex-col items-center text-center">
+                        <p class="text-gray-600 text-sm italic mb-4">"Outstanding service and support. they truly understand our needs."</p>
+                        <img src="https://i.pravatar.cc/150?u=muna" class="w-14 h-14 rounded-full mb-4 shadow-sm" alt="Muna">
+                        <h4 class="font-bold text-gray-900 text-base">John Smith</h4>
+                        <p class="text-xs text-violet-600 font-medium">Founder, Design Studio</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRICING:  -->
+        <section id="pricing" class="py-20 bg-white">
+            <div class="max-w-5xl mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3 tracking-tight">Simple Pricing</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Basic -->
+                    <div class="bg-white p-6 rounded-2xl border border-gray-200 flex flex-col text-center">
+                        <h3 class="text-base font-bold mb-3 text-gray-700 uppercase tracking-wide">Starter</h3>
+                        <div class="text-3xl font-extrabold mb-6 text-gray-900">$29<span class="text-sm text-gray-400 font-normal">/mo</span></div>
+                        <ul class="space-y-3 mb-8 text-sm text-gray-500 text-left px-4">
+                            <li><span class="text-green-600">✓</span> Basic Features</li>
+                            <li><span class="text-green-600">✓</span> 5 Projects</li>
+                            <li><span class="text-green-600">✓</span> Basic Support</li>
+                        </ul>
+                        <button class="mt-auto py-2.5 bg-violet-600 text-white rounded-lg text-sm font-bold hover:bg-violet-700 transition">Get Started</button>
+                    </div>
+                    <!-- Pro -->
+                    <div class="bg-white p-6 rounded-2xl border-2 border-violet-600 shadow-lg flex flex-col text-center relative md:scale-105">
+                        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-violet-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Popular</div>
+                        <h3 class="text-base font-bold mb-3 text-violet-600 uppercase tracking-wide">Pro</h3>
+                        <div class="text-3xl font-extrabold mb-6 text-gray-900">$99<span class="text-sm text-gray-400 font-normal">/mo</span></div>
+                        <ul class="space-y-3 mb-8 text-sm text-gray-500 text-left px-4 font-medium">
+                            <li><span class="text-green-600">✓</span> Advanced Features</li>
+                            <li><span class="text-green-600">✓</span> Unlimited Projects</li>
+                            <li><span class="text-green-600">✓</span> Priority Support</li>
+                        </ul>
+                        <button class="mt-auto py-2.5 bg-violet-600 text-white rounded-lg text-sm font-bold hover:bg-violet-700 transition">Get Started</button>
+                    </div>
+                    <!-- Enterprise -->
+                    <div class="bg-white p-6 rounded-2xl border border-gray-200 flex flex-col text-center">
+                        <h3 class="text-base font-bold mb-3 text-gray-700 uppercase tracking-wide">Enterprise</h3>
+                        <div class="text-3xl font-extrabold mb-6 text-gray-900">$299<span class="text-sm text-gray-400 font-normal">/mo</span></div>
+                        <ul class="space-y-3 mb-8 text-sm text-gray-500 text-left px-4">
+                            <li><span class="text-green-600">✓</span> Custom Features</li>
+                            <li><span class="text-green-600">✓</span> Dedicated Support</li>
+                            <li><span class="text-green-600">✓</span> SLA Agreement</li>
+                        </ul>
+                        <button class="mt-auto py-2.5 bg-violet-600 text-white rounded-lg text-sm font-bold hover:bg-violet-700 transition">Contact Sales</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="py-20 bg-gray-50">
+            <div class="max-w-xl mx-auto px-4">
+                <form class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 space-y-4">
+                    <h3 class="text-xl font-bold text-center mb-6">Get in Touch</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <input type="text" placeholder="Name" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg outline-none text-sm">
+                        <input type="email" placeholder="Email" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg outline-none text-sm">
+                    </div>
+                    <textarea rows="4" placeholder="Message" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg outline-none text-sm"></textarea>
+                    <button type="submit" class="w-full py-3 bg-violet-600 text-white rounded-lg font-bold text-sm hover:bg-violet-700 transition">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER:  -->
+    <footer class="bg-[#0f172a] text-white pt-16 pb-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <!-- Company Info -->
+                <div class="space-y-4">
+                    <span class="text-xl font-bold">CompanyLogo</span>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Transform your business with our cutting-edge solutions.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-bold text-sm mb-6 uppercase tracking-wider text-gray-300">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="#features" class="hover:text-white transition">Features</a></li>
+                        <li><a href="#testimonials" class="hover:text-white transition">Testimonials</a></li>
+                        <li><a href="#pricing" class="hover:text-white transition">Pricing</a></li>
+                        <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h4 class="font-bold text-sm mb-6 uppercase tracking-wider text-gray-300">Legal</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Connect -->
+                <div>
+                    <h4 class="font-bold text-sm mb-6 uppercase tracking-wider text-gray-300">Connect</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Twitter</a></li>
+                        <li><a href="#" class="hover:text-white transition">LinkedIn</a></li>
+                        <li><a href="#" class="hover:text-white transition">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="pt-8 border-t border-gray-800 text-center text-gray-500 text-xs">
+                <p>© 2026 CompanyLogo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+    </script>
+    
+   
+    
+        
+
+   
+    
+</body>
+</html>
+
